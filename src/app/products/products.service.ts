@@ -11,7 +11,7 @@ export class ProductsService {
 
   //Get All Products:
   getProductsService(){
-   return this.http.get(this.api_products);
+   return this.http.get('https://fakestoreapi.com/products');
   }
 
   //Get Categories:

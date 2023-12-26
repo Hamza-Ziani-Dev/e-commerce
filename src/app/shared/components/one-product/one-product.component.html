@@ -10,7 +10,7 @@
         <button class="btn btn-success" *ngIf="!showButton" (click)="showButton = true" >Add To Cart</button>
         <div class="d-flex w-50" *ngIf="showButton">
             <input type="number" class="form-control" [(ngModel)]="amount">
-            <button class="btn btn-danger" (click)="add()"  >Add</button>
+            <button class="btn btn-danger" (click)="add();showButton = false">Add</button>
         </div>
         <span>30 $</span>
     </div>

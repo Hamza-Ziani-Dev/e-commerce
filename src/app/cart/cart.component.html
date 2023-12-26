@@ -16,18 +16,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><img src="" alt=""></td>
-                <td>Test Title</td>
-                <td>149</td>
+            <tr *ngFor="let item of cartProducts">
+                <td><img src="item.item.image" alt=""></td>
+                <td>{{item.title}}</td>
+                <td>{{item.item.price}} $</td>
                 <td>
                     <div class="quantity">
                     <button class="btn btn-info">+</button>
-                    <input class="form-control" type="number" min="1"/>
+                    <input class="form-control" type="number" [(ngModel)]="item.item.quantity" min="1"/>
                     <button class="btn btn-danger">-</button>
                     </div>
                </td>
-               <td>$30.00</td>
+               <td>{{item.item.total}} $</td>
                <td><button class="btn btn-danger">Delete</button></td>
             </tr>
         </tbody>

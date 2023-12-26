@@ -3,7 +3,7 @@
         <app-select [items]="categories" [title]="'Categories'" (selectedValue)="getCategorie($event)" ></app-select>
     </div>
     <div class="row" *ngIf="!loading">
-        <div class="col-md-3 col-sm-12" *ngFor="let product of products">
+        <div class="col-md-3 col-sm-12 justify-content-center align-content-center" *ngFor="let product of products">
             <app-one-product [product]="product" (item)="addToCart($event)"></app-one-product>
         </div>
     </div>

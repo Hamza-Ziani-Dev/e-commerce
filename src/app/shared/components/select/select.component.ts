@@ -9,15 +9,12 @@ export class SelectComponent {
   //parent to child
   @Input() title : any;
   @Input() items : any[] =[]
-
   //child select to parent products
   @Output() selectedValue = new EventEmitter()
 
   constructor(){}
 
   ngOnInit(): void {
-
-    
   }
 
   onChangeData($event:any){

@@ -14,6 +14,9 @@
                     <li> <strong>Price :</strong>{{data.price}}</li>
                 </div>
             </div>
+            <div class="text-center w-100" *ngIf="loading">
+                <app-spinner></app-spinner>
+            </div>
         </div>
     </div>
 </div>

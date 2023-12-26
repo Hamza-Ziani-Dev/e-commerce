@@ -11,25 +11,23 @@ export class DetailsProductsComponent {
 
   id:any;
   data: any;
-
+  loading : boolean = false;
   constructor(
     private route:ActivatedRoute,
     private detailsService:DetailsProductsService
     ){
     this.id = this.route.snapshot.paramMap.get('id');
-    console.log('====================================');
-    console.log(this.id);
-    console.log('====================================');
     }
   ngOnInit(): void {
     this.getDetailProduct();
   }
 
   getDetailProduct(){
+    this.loading = true
     return this.detailsService.getDetailCategorieService(this.id).subscribe(res=>{
       this.data = res
+      this.loading = false
     })
-
   }
 
 }
