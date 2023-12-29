@@ -5,5 +5,7 @@ body{
     margin: 0 !important;
 }
 *{
-    font-family: cursive;
+    font-family: "Century Gothic";
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

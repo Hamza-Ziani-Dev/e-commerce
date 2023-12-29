@@ -12,5 +12,4 @@ export interface User{
     phone : string,
     imageUrl : string,
     coordinate : Coordinate,
-
 }

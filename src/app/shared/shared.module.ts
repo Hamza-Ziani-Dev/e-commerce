@@ -5,11 +5,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectComponent } from './components/select/select.component';
 import { OneProductComponent } from './components/one-product/one-product.component';
-
+import { LoginRoutingModule } from '../components/auth/login/login-routing.module';
+import { RouterModule } from '@angular/router';
+// import { DashboardRoutingModule } from '../components/dashboard/dashboard-routing.module';
 
 
 @NgModule({
@@ -23,8 +24,9 @@ import { OneProductComponent } from './components/one-product/one-product.compon
   imports: [
     CommonModule,
     AppRoutingModule,
-    BrowserModule,
+    LoginRoutingModule,
     RouterModule,
+    BrowserModule,
     FormsModule,
   ],
   exports: [

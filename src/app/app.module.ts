@@ -4,34 +4,36 @@ import {MatTableModule} from '@angular/material/table';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { DetailsProductsComponent } from './details_products/details-products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-import { CartModule } from './cart/cart.module';
-import { UsersComponent } from './users/users.component';
-import { DetailsUsersComponent } from './details-users/details-users.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ToastrModule } from 'ngx-toastr';
+import { CoreModule } from './core/core.module';
+import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductsComponent,
-    DetailsProductsComponent,
-    UsersComponent,
-    DetailsUsersComponent,
+    AppComponent,   
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    MatInputModule,
+    MatFormFieldModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
     SharedModule,
-    CartModule,
     MatTableModule,
-    NgxSpinnerModule.forRoot({ type: 'square-jelly-box' })
+    CoreModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' })
+    // NgxSpinnerModule.forRoot({ type: 'square-jelly-box' })
   ],
   providers: [
   ],
